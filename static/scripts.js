@@ -39,3 +39,8 @@ if (event.key === 'Enter') {
     sendMessage();          
 }
 });
+
+
+document.getElementById('sendButton').addEventListener('click', function() {
+  sendMessage()
+})
