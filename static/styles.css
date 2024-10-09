@@ -31,7 +31,6 @@ header {
   overflow: hidden; 
 }
 
-
 .chat-header {  
   background: linear-gradient(rgb(222,177,104), rgb(192,148,89));
   /*background-color: #4CAF50;*/
@@ -47,12 +46,14 @@ header {
   padding: 15px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #ddd;
+  list-style-type: none;
 }
 
 #messages {
   list-style-type: none;
   padding: 0;
 }
+
 
 #messages li {
   padding: 10px;
@@ -63,6 +64,7 @@ header {
   word-wrap: break-word;
   max-width: 100%;
   list-style: none;
+  list-style-type: none;
 }
 
 #messages li span {
@@ -112,7 +114,6 @@ header {
   background-color: rgb(222,177,104);
 }
 
-/* Estilo para o scroll do chat */
 #chat-window::-webkit-scrollbar {
   width: 8px;
 }
