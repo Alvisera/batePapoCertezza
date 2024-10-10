@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bate-Papo Certezza</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logoicon.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <img src="https://www.certezza.com.br/assets/images/logo.png" alt="">
+  </header>
+      <div class="chat-container">
+        <div class="chat-header">
+            <h2></h2>
+        </div>
+        <div id="chat-window">
+            <ul id="messages"></ul>
+        </div>
+        <div class="input-container" id="chat">
+            <input id="message" type="text" placeholder="Digite sua mensagem..." autocomplete="off">
+            <button id="sendButton">Enviar</button>
+        </div>
+    </div>
+    <div id="loader"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts-chat.js') }}"></script>
+    <script>
+        const username = localStorage.getItem('username');
+        console.log(username)
+        if (!username) {
+            window.location.href = '/login';
+        } else {
+            document.querySelector('h2').innerText = `Bem-vindo, ${username}!`;
+        }
+    </script>
+</body>
+</html>

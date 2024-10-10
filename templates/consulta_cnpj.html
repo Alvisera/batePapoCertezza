@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CNPJ</title>
+    <link rel="stylesheet" href="../static/styles_consulta.css">
+    <link rel="icon" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+</head>
+<body>
+    <header>
+        <div class="texto-cabecalho">
+            <h4>Comprovante de Inscrição e de Situação Cadastral</h4>
+        </div>
+        <div id="alternar_modo">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </header>
+    <div id="container_l">
+        <div class="loading"></div>
+    </div>
+    <div id="container">
+        <div class="box">  
+            <h1 class="consulta">Consulta CNPJ</h1>
+            <form action="/search" method="post">
+                <input class="input_cnpj" type="text" name="cnpj" placeholder="Digite o CNPJ" required>
+                <button id="botao" class="botao_consultar" type="submit">Consultar</button>
+            </form>
+        </div>
+        <div class="voltar-inicio">
+            <button><a href="/telainicial">Voltar</a></button>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+    <script src="../static/script.js"></script>
+</body>
+</html>

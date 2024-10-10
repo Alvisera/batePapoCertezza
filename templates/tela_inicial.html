@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logoicon.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='tela_inicial.css') }}">
+    <!--<link rel="stylesheet" href="/batePapoCertezza/static/tela_inicial.css">-->
+    <title>Portal Certezza</title>
+</head>
+<body class="fade">
+    <header>
+        <img id="img-menu-hamburguer" src="{{ url_for('static', filename='Menu.png') }}" alt="Menu">
+        <!--<img id="img-menu-hamburguer" src="/batePapoCertezza/static/Menu.png" alt="">-->
+        <h3 id="bem-vindo">Bem-Vindo</h3>
+        <img class="logo-certezza" src="https://www.certezza.com.br/assets/images/logo.png" alt="logo">
+    </header>
+    <div class="container-tela-principal">
+        <h1 id="h1-titulo-principal">Seja Bem-Vindo ao <br> portal da <span class="certezza-h1">CERTEZZA</span></h1>
+    </div>
+    <section id="aba-lateral">
+        <div class="container-lateral">
+            <h1><b>SELECIONE UMA OPÇÃO</b></h1>
+            <nav>
+                <ul>
+                    <b>
+                    <li class="opcoes"><a class="opcoes-link" href="http://sistemaz.certezza.com.br:8079/public/login.xhtml" target="_blank">SISTEMA Z</a></li>
+                    <li class="opcoes"><a class="opcoes-link" href="https://webmail.certezza.com.br/" target="_blank">EMAIL</li></a>
+                    <li class="opcoes"><a class="opcoes-link" href="" target="_blank" id="id_chat">CHAT</li></a>
+                    <li class="opcoes"><a class="opcoes-link" href="" target="_blank">BX</li></a>
+                    <li class="opcoes"><a class="opcoes-link" href="{{ url_for('consulta_cnpj') }}" target="_blank">CONSULTA CNPJ</a></li>
+                    </b>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <footer>
+        ㅤ
+    </footer>
+    <div id="loader"></div>
+    <script src="{{ url_for('static', filename='script-tela-inicial.js') }}"></script>
+    <!--<script src="/batePapoCertezza/static/script-tela-inicial.js"></script>-->
+</body>
+</html>
